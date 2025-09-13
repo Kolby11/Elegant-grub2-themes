@@ -342,7 +342,7 @@ run_dialog() {
     tui=$(dialog --backtitle ${Project_Name} \
     --radiolist "Choose your Grub theme background color variant : " 15 40 5 \
       1 "Dark" on \
-      3 "Light" off --output-fd 1 )
+      2 "Light" off --output-fd 1 )
       case "$tui" in
         1) color="dark"       ;;
         2) color="light"      ;;
