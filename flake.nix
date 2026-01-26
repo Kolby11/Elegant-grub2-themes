@@ -29,16 +29,8 @@
           
           elegant-grub2-theme = pkgs.stdenv.mkDerivation {
             name = "elegant-grub2-theme";
-            
-            src = pkgs.fetchFromGitHub {
-              owner = "vinceliuice";
-              repo = "grub2-themes";
-              rev = "2025-01-20";
-              sha256 = "sha256-M9k6R/rUvEpBTSnZ2PMv5piV50rGTBrcmPU4gsS7Byg=";
-            };
-            
+            src = "${self}";
             buildInputs = [ pkgs.imagemagick ];
-            
             installPhase = ''
               mkdir -p $out/grub/themes
               
